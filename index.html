@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Side View</title>
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+        <script src="./SideView.js"></script>
+        <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
+    </head>
+    <body>
+        <a-scene id="main-scene">
+          <a-sky id="main-container" radius="5000" color="#98DAFC" src="./main.jpg" rotation="0 180 0">
+          </a-sky>
+
+          <a-camera id="camera" position="0 0 0">
+            <a-cursor id="cursor"></a-cursor>
+
+            <a-entity position="0 -0.6 -1"
+            text="font: exo2bold; align: center; width: 4; color: #fff; value: Locality"></a-entity>
+          </a-camera>
+          
+          <a-entity id="loc">
+
+            <a-entity position="0 0.6 -1"
+            text="font: exo2bold; align: center; width: 2; color: #fff; value: To Let"></a-entity>
+            <a-image position="0 0.4 -1" src="./arrow-gc2803e44e_1280.png" scale="0.2 0.2 1" id="interior"></a-image>
+          </a-entity>
+
+          <a-entity id="back" visible="false">
+            <a-entity position="0 -0.6 -1"
+            text="font: exo2bold; align: center; width: 2; color: #000; value: Go Back"></a-entity>
+            <a-image position="0 -0.4 -1" src="./arrow-gc2803e44e_1280.png" scale="0.2 0.2 1" rotation="180 0 0" 
+            id="back-button"></a-image>
+          </a-entity>
+
+          <a-entity id="side-view-container" place-side-view></a-entity>
+        </a-scene>
+    </body>
+</html>
